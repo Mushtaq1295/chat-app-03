@@ -33,10 +33,7 @@ app.use(cors({
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
-// app.get('/api/test-cookies', (req, res) => {
-//   console.log("Received cookies:", req.cookies);
-//   res.json({ cookies: req.cookies });
-// });
+
 if(process.env.NODE_ENV === "production"){
   app.use(express.static(path.join(__dirname,"../frontend/dist")));
 
